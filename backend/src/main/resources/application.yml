@@ -1,0 +1,35 @@
+server:
+  port: 8787
+
+spring:
+  datasource:
+    url: jdbc:sqlite:${ocr.base-dir}/state/app.db
+    driver-class-name: org.sqlite.JDBC
+    hikari:
+      maximum-pool-size: 1
+      minimum-idle: 1
+      idle-timeout: 60000
+      connection-timeout: 30000
+      connection-init-sql: PRAGMA busy_timeout=30000
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+ocr:
+  base-dir: /Users/kmg/Project/ocr
+  browser:
+    auto-open: true
+  credentials:
+    default-dir: ${ocr.base-dir}/credentials
+    monthly-cap: 1000
+    timezone: America/Los_Angeles
+  output:
+    pdf-dir: ${ocr.base-dir}/output/pdf
+    report-dir: ${ocr.base-dir}/output/reports
+  state:
+    db-path: ${ocr.base-dir}/state/app.db
+  logs:
+    dir: ${ocr.base-dir}/logs
+  external-links:
+    key-creation-url: ${OCR_KEY_CREATION_URL:https://console.cloud.google.com/iam-admin/serviceaccounts/details/103369290391159216981;edit=true/keys?hl=ko&inv=1&invt=AbsVNg&project=primal-abacus-485312-f6}
+    key-monitoring-url: ${OCR_KEY_MONITORING_URL:https://console.cloud.google.com/apis/api/vision.googleapis.com/quotas?hl=ko&inv=1&invt=AbsVNg&project=primal-abacus-485312-f6}

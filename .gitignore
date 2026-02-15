@@ -1,0 +1,17 @@
+# backend
+/backend/target/
+
+# frontend
+/frontend/node_modules/
+/frontend/dist/
+
+# runtime outputs
+/state/app.db
+/logs/*.log
+/output/pdf/*.pdf
+/output/reports/*.json
+
+# macOS
+.DS_Store
+credentials/*.json
+state/*.db*
