@@ -27,6 +27,23 @@
   - 로직 변경 전 생성된 PDF는 자동 갱신되지 않음
   - 새 로직 반영 결과가 필요하면 해당 폴더를 다시 실행해 PDF 재생성 필요
 
+## 서비스 화면 (사용자 관점)
+### 1) Dashboard
+- 현재 실행 상태, 남은 한도, 진행 상황, 실시간 로그 확인
+![Dashboard](docs/screenshots/dashboard.png)
+
+### 2) Credentials
+- JSON 키 목록, 사용량/남은 한도, 리셋 시각, 수동 보정
+![Credentials](docs/screenshots/credentials.png)
+
+### 3) Queue
+- OCR 대상 폴더 추가, 이미지 개수 확인, 전략/병렬수 설정, 작업 시작/중지
+![Queue](docs/screenshots/queue.png)
+
+### 4) History
+- 작업 이력, 실패 원인, 생성된 PDF 링크 확인
+![History](docs/screenshots/history.png)
+
 ## 폴더 구조
 - `/Users/kmg/Project/ocr/backend` Spring Boot
 - `/Users/kmg/Project/ocr/frontend` React(Vite)
